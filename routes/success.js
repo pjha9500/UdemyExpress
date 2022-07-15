@@ -4,8 +4,8 @@ const rootDir=require('../util/path');
 const Route=express.Router();
 
 
-Route.get('/', (req, res, next) => {
-    res.sendFile(path.join(rootDir,'views','shop.html'));
-  });
-  
+Route.post('/success',(req,res,next)=>{
+    res.sendFile(path.join(rootDir,'views','success.html'));
+});
+
 module.exports=Route;
