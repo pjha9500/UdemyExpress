@@ -3,9 +3,7 @@ const path=require('path');
 const rootDir=require('../util/path');
 const Route=express.Router();
 
-
-Route.post('/success',(req,res,next)=>{
-    res.sendFile(path.join(rootDir,'views','success.html'));
-});
+const successcontrollers=require('../controllers/success')
+Route.post('/success',successcontrollers.succespage);
 
 module.exports=Route;
